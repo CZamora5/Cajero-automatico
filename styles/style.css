@@ -1,0 +1,148 @@
+:root {
+  --main-color: #242433;
+  --secondary-color: #5136AD;
+  --txt-color: #f0f0f0;
+  --accent-color: #11111E;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--main-color);
+  color: var(--txt-color);
+}
+
+.navbar {
+  background-color: var(--secondary-color);
+  height: 48px;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  height: 100%;
+}
+
+.navbar-content > a {
+  cursor: pointer;
+}
+
+.navbar-content > div {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.content {
+  border: 3px solid var(--secondary-color);
+  margin: 0 auto;
+  margin-top: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 90%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.accountContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.account {
+  cursor: pointer;
+}
+
+.account:hover {
+  background-color: var(--secondary-color);
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  padding: 0.75rem 1.5rem;
+  margin: 1rem;
+}
+
+input {
+  padding-left: 1rem;
+  height: 2.5rem;
+  width: 50%;
+}
+
+@media screen and (max-width: 380px) {
+  .navbar-content > div {
+    font-size: 16px;
+  }
+
+  .navbar-content img {
+    height: 24px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20.8px;
+  }
+  
+  h3 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 240px) {
+  .navbar-content > div {
+    font-size: 12px;
+  }
+
+  .navbar-content img {
+    height: 16px;
+  }
+  
+  h1 {
+    font-size: 20.8px;
+  }
+  
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 12.8px;
+  }
+}
+
+@media screen and (max-width: 472px) {
+  button {
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+}
