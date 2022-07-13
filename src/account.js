@@ -7,7 +7,15 @@ export default class Account {
   }
 
   getName() {
+    return this._firstname;
+  }
+
+  getFullName() {
     return `${this._firstname} ${this._lastname}`
+  }
+
+  getBalance() {
+    return this._balance;
   }
 
   setPassword(previousPassword, newPassword) {
@@ -19,15 +27,20 @@ export default class Account {
     return false;
   }
 
+  checkPassword(password) {
+    return this._password === password;
+  }
+
   transaction(amount) {
     if (this._balance + amount < 10 || this._balance + amount > 990) {
       return {
         completed: false,
         info:
-          "Lo sentimos la transacción no pudo ser completada," +
-          (this._balance + amount < 10)
+          `Lo sentimos la transacción no pudo ser completada,
+          ${(this._balance + amount < 10)
             ? "el saldo de tu cuenta no puede ser menor a $10"
-            : "el saldo de tu cuenta no puede exceder $990"
+            : "el saldo de tu cuenta no puede exceder $990"}
+          `
       };
     }
 
